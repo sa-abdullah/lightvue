@@ -181,6 +181,85 @@ Vue.component('LvButton', LvButton);
   </div>
 </template>
 
+<template>
+  <div class="content-section implementation">
+    <docs-card title="Installing LightVue in Nuxt 3" :showCardActions="false" :responsive="false">
+      <div class="install__wrapper" style="padding: 1rem">
+        <div class="install_container">
+          <div class="install__process">
+            <CodeHighlight lang="bash">
+              <pre>
+npm install lightvue@next
+# OR
+yarn add lightvue@next
+              </pre>
+            </CodeHighlight>
+          </div>
+        </div>
+      </div>
+    </docs-card>
+  </div>
+
+  <div class="content-section implementation">
+    <docs-card title="Register LightVue Plugin in Nuxt" :showCardActions="false" :responsive="false">
+      <div class="install__wrapper" style="padding: 1rem">
+        <div class="install_container">
+          <div class="install__process">
+            <CodeHighlight lang="ts">
+              <pre>
+import { defineNuxtPlugin } from '#app'
+import LightVue from 'lightvue'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(LightVue)
+})
+              </pre>
+            </CodeHighlight>
+          </div>
+        </div>
+      </div>
+    </docs-card>
+  </div>
+
+  <div class="content-section implementation">
+    <docs-card title="Add LightVue Styles in Nuxt" :showCardActions="false" :responsive="false">
+      <div class="install__wrapper" style="padding: 1rem">
+        <div class="install_container">
+          <div class="install__process">
+            <CodeHighlight lang="ts">
+              <pre>
+export default defineNuxtConfig({
+  css: ['lightvue/dist/lightvue.css']
+})
+              </pre>
+            </CodeHighlight>
+          </div>
+        </div>
+      </div>
+    </docs-card>
+  </div>
+
+  <div class="content-section implementation">
+    <docs-card title="Using LightVue Components in Nuxt" :showCardActions="false" :responsive="false">
+      <div class="install__wrapper" style="padding: 1rem">
+        <div class="install_container">
+          <div class="install__process">
+            <CodeHighlight lang="vue">
+              <pre>
+  <template>
+    // No need to manually import LvButton. It is auto-registered by Nuxt 3
+    <LvButton label="Click Me" />
+  </template>
+              </pre>
+            </CodeHighlight>
+          </div>
+        </div>
+      </div>
+    </docs-card>
+  </div>
+</template>
+
+
 <script>
 import DocsCard from '@/components/docs-card/DocsCard';
 import CodeHighlight from '@/components/docs-card/CodeHighlight.vue';
