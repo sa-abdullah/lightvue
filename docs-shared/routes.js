@@ -144,7 +144,11 @@ export const appRoutes = [
     children: [
       {
         path: 'installation',
-        component: () => import('@/pages/getting-started/installation.vue'),
+        component: () => import('@/docs-nuxt3/nuxt.installation.vue'),
+      },
+      {
+        path: 'Installation (Nuxt)',
+        component: () => import('@/pages/getting-started/light-icons.vue'),
       },
       {
         path: 'light-icons',
